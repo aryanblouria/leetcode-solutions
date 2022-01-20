@@ -15,7 +15,7 @@ public:
 };
 
 //O(nlog(n))
-class Solution {
+class Solution2 {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
         int i = 0, j = nums.size()-1;
