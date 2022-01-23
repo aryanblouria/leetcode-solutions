@@ -45,3 +45,19 @@ public:
         return nums.size()-c;
     }
 };
+
+//O(n)
+class Solution4 {
+public:
+    int removeDuplicates(vector<int>& nums) {
+        int ct = 0;
+        for(int i = 1; i < nums.size(); i++)
+        {
+            if (nums[i] == nums[i-1]) 
+                ct++;
+            else 
+                nums[i-ct] = nums[i];
+        }
+        return nums.size()-ct;
+    }
+};
