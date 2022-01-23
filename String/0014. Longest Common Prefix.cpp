@@ -23,3 +23,20 @@ public:
         return prefix;
     }
 };
+
+//O(n)
+class Solution2 {
+public:
+    string longestCommonPrefix(vector<string>& strs) {
+        string prefix = "";
+        sort(strs.begin(), strs.end());
+
+        int i = 0, j = strs.size()-1, k = 0;
+        while (strs[i][k] == strs[j][k] && k != min(strs[i].length(), strs[j].length()))
+        {
+            prefix += strs[i][k];
+            k++;
+        }
+        return prefix;
+    }
+};
