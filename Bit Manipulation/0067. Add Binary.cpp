@@ -19,3 +19,51 @@ public:
         return s;
     }
 };
+
+//O(n)
+class Solution2 {
+public:
+    string addBinary(string a, string b) {
+       while (a.length() < b.length())
+           a = "0" + a;
+       while (b.length() < a.length())
+           b = "0" + b;
+       
+       int carry = 0;
+       string s = "";
+       for (int i = a.length()-1; i >= 0; i--)
+       {
+           if (a[i] == '1' && b[i] == '1')
+           {
+               if (carry == 0)
+                   s = "0" + s;
+               else
+                   s = "1" + s;
+               carry = 1;
+           }   
+           else if ((a[i] == '0' && b[i] == '1') || (a[i] == '1' && b[i] == '0'))
+           {
+               if (carry == 0)
+                   s = "1" + s;
+               else
+               {
+                   s = "0" + s;
+                   carry = 1;
+               }   
+           }
+           else
+           {
+               if (carry == 0)
+                   s = "0" + s;
+               else
+               {
+                   s = "1" + s;
+                   carry = 0;
+               }       
+           }
+       }
+        if (carry != 0)
+            s = "1" + s;
+        return s;
+    }
+};
