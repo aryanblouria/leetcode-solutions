@@ -40,7 +40,6 @@ public:
             l2 = l2->next;
             p = p->next;
         }
-         
         if (carry)
         {
             ListNode* t = new ListNode;
