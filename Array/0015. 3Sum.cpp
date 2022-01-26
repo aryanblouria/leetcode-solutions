@@ -30,7 +30,8 @@ public:
         vector<vector<int>> v;
         sort(nums.begin(), nums.end());
         
-        for (int i = 0; i < nums.size()-2; i++)
+        if (nums.size() < 3) return v;
+        for (int i = 0; i < nums.size()-2 && nums[i] <= 0; i++)
         {
             if (i > 0 && nums[i] == nums[i-1]) continue;
             int target = -nums[i];
