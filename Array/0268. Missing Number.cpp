@@ -29,3 +29,16 @@ public:
         return ans;
     }
 };
+
+//O(n)
+class Solution3 {
+public:
+    int missingNumber(vector<int>& nums) {
+        int n = nums.size();
+        int sum = n * (n+1) / 2;
+        
+        for (auto x: nums)
+            sum -= x;
+        return sum;
+    }
+};
