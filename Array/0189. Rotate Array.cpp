@@ -27,7 +27,7 @@ public:
     }
 };
 
-//O(log(n))
+//O(n)
 class Solution3 {
 public:
     void rotate(vector<int>& nums, int k) {
