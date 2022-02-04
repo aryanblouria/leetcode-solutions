@@ -1,4 +1,4 @@
-//O(n^2)
+//O(n^2*log(n))
 class Solution1 {
 public:
     vector<int> intersect(vector<int>& nums1, vector<int>& nums2) {
@@ -23,7 +23,7 @@ public:
     }
 };
 
-//O(n)
+//O(nlog(n))
 class Solution2 {
 public:
     vector<int> intersect(vector<int>& nums1, vector<int>& nums2) {
