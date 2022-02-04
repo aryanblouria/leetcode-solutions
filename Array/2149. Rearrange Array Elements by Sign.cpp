@@ -1,5 +1,5 @@
 //O(n)
-class Solution {
+class Solution1 {
 public:
     vector<int> rearrangeArray(vector<int>& nums) {
         vector<int> v (nums.size());
@@ -22,7 +22,7 @@ public:
 };
 
 //O(n)
-class Solution {
+class Solution2 {
 public:
     vector<int> rearrangeArray(vector<int>& nums) {
         vector<int> a, b;
