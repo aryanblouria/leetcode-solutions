@@ -42,3 +42,17 @@ public:
         return sum;
     }
 };
+
+
+//O(n)
+class Solution4 {
+public:
+    int findDuplicate(vector<int>& nums) {
+        int x = 0;
+        for (auto e: nums)
+            x ^= e;
+        for (int i = 1; i < nums.size(); i++)
+            x ^= i;
+        return x;
+    }
+};
