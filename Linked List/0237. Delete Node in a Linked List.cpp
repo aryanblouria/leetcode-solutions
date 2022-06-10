@@ -13,12 +13,21 @@ public:
     }
 };
 
-//O(n)
+//O(1)
 class Solution2 {
 public:
     void deleteNode(ListNode* node) {
         ListNode *next = node->next;
         *node = *next;
         delete next;
+    }
+};
+
+//O(1)
+class Solution3 {
+public:
+    void deleteNode(ListNode* node) {
+        node->val = node->next->val;
+        node->next = node->next->next;
     }
 };
